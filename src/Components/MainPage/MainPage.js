@@ -25,12 +25,15 @@ function MainPage() {
       <section>
         <header>
           <div className="logo">
-            <Lottie 
-              options={logoOptions}
-              height={50}
-              width={50}
-            />
-            <h4>Ms. Rona</h4>
+            <ul>
+              <li><h4><Lottie 
+                  options={logoOptions}
+                  height={50}
+                  width={50}
+                  className="lottie-logo"
+                />
+                Ms. Rona</h4></li>
+            </ul>
           </div>
 
           {/* <a href=""><img src="" wdith="100" alt="logo" /></a> */}
