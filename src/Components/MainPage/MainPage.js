@@ -3,7 +3,6 @@ import './styles.css';
 import Lottie from 'react-lottie';
 import animationData from '../../lotties/Animation.json';
 import virusAnimation from '../../lotties/VirusAnimation.json'
-import {Link} from "react-router-dom";
 import Header from "../Header/Header";
 function MainPage() {
   const logoOptions = {
