@@ -4,6 +4,7 @@ import Lottie from 'react-lottie';
 import animationData from '../../lotties/Animation.json';
 import virusAnimation from '../../lotties/VirusAnimation.json'
 import {Link} from "react-router-dom";
+import Header from "../Header/Header";
 function MainPage() {
   const logoOptions = {
     loop: true,
@@ -24,29 +25,7 @@ function MainPage() {
   return (
     <div>
       <section>
-        <header>
-          <div className="logo">
-            <ul>
-              <li><h4><Lottie 
-                  options={logoOptions}
-                  height={50}
-                  width={50}
-                  className="lottie-logo"
-                />
-                Ms. Rona</h4></li>
-            </ul>
-          </div>
-
-          {/* <a href=""><img src="" wdith="100" alt="logo" /></a> */}
-          <div>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/health">Health</Link></li>
-              <li><Link to="/statistics">Statistics</Link></li>
-              <li><Link to="">Blog</Link></li>
-            </ul>
-          </div>
-        </header>
+        <Header/>
       </section>
       <section id="main">
       <div className="main-text">
