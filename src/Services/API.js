@@ -8,91 +8,65 @@ const instance = axios.create({
 });
 
 const API = {
-    getCountries: async function (token) {
-        let response = await instance.get(`${URL}/api/covid/countries`);
+    countries: async function (token) {
+        let response = await instance.get(`/api/covid/countries`);
         return response.data;
     },
-    getcountryNameByCode: async (CODE) => {
-        let response = await instance.get(`${URL}/tokens`);
+    countryNameByCode: async (CODE) => {
+        let response = await instance.get(`/api/covid/countryNameByCode/${CODE}`);
         return response.data;
     },
-    getShapeByRoute: async function (token, routeId) {
+    dailyTotals: async function (CODE) {
         let response = await instance.get(
-            `${URL}/shapes/find?token=${token}&id=${routeId}`
+            `/api/covid/dailyTotals/${CODE}`
         );
         return response.data;
     },
-    getStopsByRoute: async function (routeId) {
-        let response = await instance.get(`${URL}/stops/find?id=${routeId}`);
+    globalCases: async function (routeId) {
+        let response = await instance.get(`/api/covid/globalCases`);
         return response.data;
     },
-    registerUser: async function (username, password, email) {
+    globalData: async function () {
         try {
-            let response = await instance.post(`${URL}/register`, {
-                user: username,
-                pwd: password,
-                email,
-            });
+            let response = await instance.get(`/register`);
             return response.data;
         } catch (e) {
-            const { status } = e.response;
-            if (status === 406) {
-                return { message: "Account already in use" };
-            }
-            if (status === 500) {
-                return { message: "There was an Error creating your account" };
-            }
-            return { message: "There was an Error creating your account" };
+            return { message: "There was an Error getting the global Data info" };
         }
     },
-    getStations: async function () {
+    weeklyRegionalTotalCases: async function (CODE) {
         try {
-            let response = await instance.get(`${URL}/stations`);
+            let response = await instance.get(`/api/covid/weeklyRegionalTotalCases/${CODE}`);
             return response.data;
         } catch (e) {
-            return { message: "There was an error getting the stations" };
+            return { message: "There was an Error getting the weekly Regional Total  Info" };
         }
     },
-    getTrainSchedule: async function (arrival, departure, date) {
+    weeklyRegionalRecoverdCases: async function (CODE) {
         try {
-            let response = await instance.get(
-                `${URL}/trains/find?arrival=${arrival}&departure=${departure}&departure%20date=${date}`
-            );
+            let response = await instance.get(`/api/covid/weeklyRegionalRecoverdCases/${CODE}`);
             return response.data;
         } catch (e) {
-            return { message: "There was an error getting your schedule" };
+            return { message: "There was an Error getting the weekly Regional recovered cases  Info" };
         }
     },
-    getAllTrirail: async function () {
+    weeklyRegionalDeceasedCases: async function (CODE) {
         try {
-            let response = await instance.get(`${URL}/trirail/find/all`);
+            let response = await instance.get(`/api/covid/weeklyRegionalDeceasedCases/${CODE}`);
             return response.data;
         } catch (e) {
-            return { message: "There was an error getting the trirails" };
+            return { message: "There was an Error getting the weekly Regional deceased cases  Info" };
         }
     },
-    getTrirailShape: async function (id) {
+    regionalDataByCountry: async function (CODE) {
         try {
-            let response = await instance.get(`${URL}/trishape/find?id=${id}`);
+            let response = await instance.get(`/api/covid/regionalDataByCountry/${CODE}`);
             return response.data;
         } catch (e) {
-            return { message: "There was an error getting the trirails shape" };
+            return { message: "There was an Error getting the weekly Regional data by Country  Info" };
         }
     },
-    LoginUser: async function (username, password) {
-        try {
-            let base64encoded = btoa(`${username}:${password}`);
-            let response = await instance.get(`${URL}/login`, {headers: {Authorization: `Basic ${base64encoded}`}});
-            return response.data;
-        } catch (e) {
-            switch (e?.response?.status) {
-                case 404:
-                    return { message: e.response.data.Error };
-                default:
-                    return { message: "There was an error login in" };
-            }
-        }
-    },
+
 };
 
 
