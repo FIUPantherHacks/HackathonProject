@@ -6,6 +6,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import Header from "./Components/Header/Header";
 
 
 
@@ -17,6 +18,9 @@ export default function App() {
         <Router>
             {/*Routing is done here */}
             <Switch>
+                <Route path="/header">
+                    <Header/>
+                </Route>
                 <Route path="/health">
                     <Statistics/>
                 </Route>
