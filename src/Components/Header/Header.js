@@ -34,7 +34,7 @@ function Header() {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/health">Health</Link></li>
                             <li><Link to="/statistics">Statistics</Link></li>
-                            <li><Link to="">Blog</Link></li>
+                            <li><Link to="/community">Community</Link></li>
                         </ul>
                     </div>
                 </header>
