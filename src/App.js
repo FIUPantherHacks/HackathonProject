@@ -1,6 +1,8 @@
 import React from 'react';
 import MainPage from './Components/MainPage/MainPage'
 import Statistics from './Components/Statistics/'
+import Health from './Components/Health/Health'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -22,7 +24,7 @@ export default function App() {
                     <Header/>
                 </Route>
                 <Route path="/health">
-                    <Statistics/>
+                    <Health/>
                 </Route>
                 <Route path="/statistics">
                     <Statistics/>
