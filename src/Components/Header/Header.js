@@ -18,18 +18,18 @@ function Header() {
                 <header>
                     <div className="logo">
                         <ul>
-                            <li><h4><Lottie
+                            <li><a href="/"><h4><Lottie
                                 options={logoOptions}
                                 height={50}
                                 width={50}
                                 className="lottie-logo"
                             />
-                                Ms. Rona</h4></li>
+                                Ms. Rona</h4></a></li>
                         </ul>
                     </div>
 
                     {/* <a href=""><img src="" wdith="100" alt="logo" /></a> */}
-                    <div>
+                    <div className="navbar">
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/health">Health</Link></li>
