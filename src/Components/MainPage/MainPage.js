@@ -30,7 +30,7 @@ function MainPage() {
               height={50}
               width={50}
             />
-            <h4>Mrs. Rona</h4>
+            <h4>Ms. Rona</h4>
           </div>
 
           {/* <a href=""><img src="" wdith="100" alt="logo" /></a> */}
