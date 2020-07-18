@@ -2,17 +2,8 @@ import React from 'react';
 import './styles.css';
 import Lottie from 'react-lottie';
 import animationData from '../../lotties/Animation.json';
-import virusAnimation from '../../lotties/VirusAnimation.json'
 import Header from "../Header/Header";
 function MainPage() {
-  const logoOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: virusAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
   const defaultOptions = {
     loop: true,
     autoplay: true,
