@@ -30,14 +30,15 @@ function MainPage() {
               height={50}
               width={50}
             />
+            <h4>Mrs. Rona</h4>
           </div>
 
           {/* <a href=""><img src="" wdith="100" alt="logo" /></a> */}
           <div>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="">Services</a></li>
+              <li><a href="/">Health</a></li>
+              <li><a href="">Statistics</a></li>
               <li><a href="">Blog</a></li>
             </ul>
           </div>
