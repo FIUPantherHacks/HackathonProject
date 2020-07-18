@@ -1,0 +1,39 @@
+  section {
+    margin: 0 120px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+  }
+  header div {
+    margin-left: auto;
+    font-size: 20px;
+  }
+  header ul li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  
+  #main {
+    margin: 0 120px;
+    margin-top: 200px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #main .main-text{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  span {
+      border-bottom: 3px solid red;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+.logo {
+  text-align: left;
+  justify-content: left;
+}
