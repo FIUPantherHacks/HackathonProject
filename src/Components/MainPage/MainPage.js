@@ -3,6 +3,7 @@ import './styles.css';
 import Lottie from 'react-lottie';
 import animationData from '../../lotties/Animation.json';
 import virusAnimation from '../../lotties/VirusAnimation.json'
+import {Link} from "react-router-dom";
 function MainPage() {
   const logoOptions = {
     loop: true,
@@ -39,10 +40,10 @@ function MainPage() {
           {/* <a href=""><img src="" wdith="100" alt="logo" /></a> */}
           <div>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">Health</a></li>
-              <li><a href="">Statistics</a></li>
-              <li><a href="">Blog</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/health">Health</Link></li>
+              <li><Link to="/statistics">Statistics</Link></li>
+              <li><Link to="">Blog</Link></li>
             </ul>
           </div>
         </header>
