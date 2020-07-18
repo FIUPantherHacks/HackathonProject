@@ -9,6 +9,7 @@ import {
     Route
 } from "react-router-dom";
 import Header from "./Components/Header/Header";
+import Community from "./Components/Community";
 
 
 
@@ -25,6 +26,9 @@ export default function App() {
                 </Route>
                 <Route path="/health">
                     <Health/>
+                </Route>
+                <Route path="/community">
+                    <Community/>
                 </Route>
                 <Route path="/statistics">
                     <Statistics/>
