@@ -19,7 +19,7 @@ function MainPage() {
       <section id="main">
       <div className="main-text">
         <span>COVID-19</span> <br></br> 
-        some info here <br></br>
+        MMMMsome info here <br></br>
         lorem ipsum indeed <br></br>
       </div>
       <Lottie 
