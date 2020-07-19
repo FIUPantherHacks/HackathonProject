@@ -7,7 +7,7 @@ export default function App() {
     <>
     <Header/>
     <section>
-        <h1>Wash Your Hand</h1>
+        <h1> <img src="../imgs/washHands.png" width="50" alt="logo" />Wash Your Hand</h1>
         <ul>
         <li> Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing.</li>
         <li> It’s especially important to wash:</li>
@@ -27,7 +27,7 @@ export default function App() {
         </ul>  
     </section>
     <section>
-        <h1>Avoid close contact</h1>
+        <h1> <img src="../imgs/noTouching.png" width="50" alt="logo" />Avoid close contact</h1>
         <ul>
         <li>Inside your home: Avoid close contact with people who are sick.</li>
         <ul>
@@ -42,7 +42,7 @@ export default function App() {
         </ul>
     </section>
     <section>
-        <h1>Cover your mouth and nose with a cloth face cover when around others</h1>
+        <h1> <img src="../imgs/mask.png" width="50" alt="logo" />Cover your mouth and nose with a cloth face cover when around others</h1>
             <ul>
                 <li>You could spread COVID-19 to others even if you do not feel sick.</li>
                 <li>he cloth face cover is meant to protect other people in case you are infected.</li>
@@ -55,7 +55,7 @@ export default function App() {
             </ul>
     </section>
     <section>
-        <h1>Cover coughs and sneezes</h1>
+        <h1> <img src="../imgs/mask.png" width="50" alt="logo" />Cover coughs and sneezes</h1>
         <ul>
             <li>Always cover your mouth and nose with a tissue when you cough or sneeze or use the inside of your elbow and do not spit.</li>
             <li>Throw used tissues in the trash.</li>
@@ -63,7 +63,7 @@ export default function App() {
         </ul>
     </section>
     <section>
-        <h1>Clean and disinfect</h1>
+        <h1> <img src="../imgs/disinfect.png" width="50" alt="logo" />Clean and disinfect</h1>
         <ul>
             <li> Clean AND disinfect frequently touched surfaces daily. This includes tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks.</li>
             <li> If surfaces are dirty, clean them. Use detergent or soap and water prior to disinfection.</li>
@@ -71,8 +71,7 @@ export default function App() {
         </ul>
     </section>
     <section>
-        <img src="../imgs/days.png" width="50" alt="logo" />
-        <h1>Monitor Your Health Daily</h1>
+        <h1> <img src="../imgs/days.png" width="50" alt="logo" />Monitor Your Health Daily</h1>
         <ul>
             <li>Be alert for symptoms. Watch for fever, cough, shortness of breath, or other symptoms of COVID-19.</li>
             <ul>
