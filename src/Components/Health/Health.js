@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../Header/Header";
 import './styles.css';
-import {HeaderU} from "./Styled";
+
 export default function App() {
   
   return (
