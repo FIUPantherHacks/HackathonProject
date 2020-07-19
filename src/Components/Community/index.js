@@ -59,7 +59,7 @@ function Community() {
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
                         />
                         <Divider className={classes.divider} orientation="vertical" />
-                        <IconButton type="submit" className={classes.iconButton} aria-label="search" onClick={onChange}>
+                        <IconButton className={classes.iconButton} aria-label="search" onClick={onChange}>
                             <SearchIcon style={{ color: pink[500] }}/>
                         </IconButton>
 

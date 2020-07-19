@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-.chart-container{
+.chart-container {
     /* background-color: red; */
     margin-left: 4%;
     margin-right: auto;
-=======
+}
 .chart-container {
     display:flex;
     justify-content:center;
@@ -11,7 +10,6 @@
 }
 canvas {
     text-align: center;
->>>>>>> 95e2ab60f7a27637d05c9f4b4e3a87de0ebcbfb9
     justify-content: center;
     display: flex;
 }
