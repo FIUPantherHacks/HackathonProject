@@ -2,7 +2,7 @@ const axios = require('axios');
 const key = '8126c90f-d8a6-4c30-b99c-c89b0cd490a7';
 
 const instance = axios.create({
-    baseURL: 'https://www.cyberpurge.com',
+    baseURL: 'https://cors-anywhere.herokuapp.com/cyberpurge.com',
     timeout: 1000,
     headers: {'X-Authorization' : key}
 });
@@ -28,7 +28,8 @@ const API = {
     },
     globalData: async function () {
         try {
-            let response = await instance.get(`/register`);
+            let response = await instance.get(`/api/covid/globalData`);
+            console.log('API SERVICED', response);
             return response.data;
         } catch (e) {
             return { message: "There was an Error getting the global Data info" };
