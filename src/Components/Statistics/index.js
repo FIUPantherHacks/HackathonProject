@@ -57,8 +57,8 @@ function  Statistics() {
 
     };
     const handleChange2 = (event,value) => {
-        setfCountry(value.props.value.regionName);
-        setfCountryN(value.props.value.casesCount);
+        setsCountry(value.props.value.regionName);
+        setsCountryN(value.props.value.casesCount);
 
     };
     const [data, setdata] = useState(dataD);
