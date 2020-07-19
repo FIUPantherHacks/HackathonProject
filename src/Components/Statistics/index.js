@@ -62,7 +62,7 @@ function  Statistics() {
         <em>None</em>
       </MenuItem>
         {data.map((country) => (
-            <MenuItem value={'${country.regionName}'}>{country.regionName}</MenuItem>
+            <MenuItem value={`$\{country.regionName}`}>{country.regionName}</MenuItem>
         ))}
     </Select>
     <FormHelperText>Choose a Country</FormHelperText>
