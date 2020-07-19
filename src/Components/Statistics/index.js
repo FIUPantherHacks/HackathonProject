@@ -24,7 +24,7 @@ function  Statistics() {
         }
 
         getNewData();
-    });
+    }, []);
     console.log(data);
     return (
         <>
