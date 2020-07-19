@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "../Header/Header";
+import Divider from '@material-ui/core/Divider';
 import './styles.css';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
             <li> <p className="dont">DON'T</p><img width="390" src="https://media.giphy.com/media/gjUgdsM72ZM1C8KzeT/giphy.gif" alt="gif"/></li>
             <li> <p className="do">DO</p><img src="https://media.giphy.com/media/tkBwALAud5Sfu/giphy.gif" alt="gif"/></li>
         </ul>
+        <Divider></Divider>
     </section>
     <section>
         <h1> <img src="../imgs/noTouching.png" width="50" alt="logo" />Avoid close contact</h1>
@@ -24,6 +26,7 @@ export default function App() {
             <li> <p className="dont">DON'T</p><img width="390" src="https://media.giphy.com/media/36otikFtpDJq8/giphy.gif" alt="gif"/></li>
             <li> <p className="do">DO</p><img width="310" src="https://media.giphy.com/media/ln7pLAei70XANcY0f3/giphy.gif" alt="gif"/></li>
         </ul>
+        <Divider></Divider>
     </section>
     <section>
         <h1> <img src="../imgs/mask.png" width="50" alt="logo" />Cover coughs and sneezes</h1>
@@ -31,6 +34,7 @@ export default function App() {
             <li> <p className="dont">DON'T</p><img src="https://media.giphy.com/media/Hkya3YFcXcmQ0/giphy.gif" alt="gif"/></li>
             <li> <p className="do">DO</p><img width="320" src="https://media.giphy.com/media/3ohs87Vwnip4EHaQuc/giphy.gif" alt="gif"/></li>
         </ul>
+        <Divider></Divider>
     </section>
     <section>
         <h1> <img src="../imgs/disinfect.png" width="50" alt="logo" />Clean and disinfect</h1>
@@ -38,6 +42,7 @@ export default function App() {
             <li> <p className="dont">DON'T</p><img width="310" src="https://media.giphy.com/media/xT5LMNJvIyXUhG1LOM/giphy.gif" alt="gif"/></li>
             <li> <p className="do">DO</p><img src="https://media.giphy.com/media/9BuYR8p4HC4E0/giphy.gif" alt="gif"/></li>
         </ul>
+        <Divider></Divider>
     </section>
     <section>
         <h1> <img src="../imgs/days.png" width="50" alt="logo" />Monitor Your Health Daily</h1>
@@ -45,6 +50,7 @@ export default function App() {
             <li> <p className="dont">DON'T</p><img width="350" src="https://media.giphy.com/media/26Ff1nitjsbu7KI1i/giphy.gif" alt="gif"/></li>
             <li> <p className="do">DO</p><img width="270" src="https://media.giphy.com/media/XepcmEMNavyHv1qe8u/giphy.gif" alt="gif"/></li>
         </ul>
+        <Divider></Divider>
     </section>
     </div>
     </div>
