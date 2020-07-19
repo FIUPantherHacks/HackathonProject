@@ -50,14 +50,14 @@ function  Statistics() {
     const [sCountry, setsCountry] = React.useState('');
     const [sCountryN, setsCountryN] = React.useState(31);
     const handleChange = (event,value) => {
-        // console.log("F", event);
-        // console.log("F2", value.props.value);
-        setfCountry(value.props.value.regionName);
+        console.log("F", event);
+        console.log("F2", value);
+        setfCountry(value.props.value);
         setfCountryN(value.props.value.casesCount);
 
     };
     const handleChange2 = (event,value) => {
-        setsCountry(value.props.value.regionName);
+        setsCountry(value.props.value);
         setsCountryN(value.props.value.casesCount);
 
     };
@@ -108,7 +108,7 @@ function  Statistics() {
         </section>
 
 
-        <Chart country1={fCountryN} country2={sCountryN} country1Name={fCountry} country2Name={sCountry} />
+        <Chart country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName} country2Name={sCountry.regionName} />
     </>;
 }
 
