@@ -9,6 +9,7 @@ import Divider from '@material-ui/core/Divider';
 import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
 import { pink } from '@material-ui/core/colors';
+import MenuItem from "@material-ui/core/MenuItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,11 @@ function Community() {
     const [data, setData] = useState([{}]);
 
 
+    function onChange(event, value) {
+        console.log("E", event);
+        console.log("V", value);
+
+    }
 
     return (
         <div className="community-main">
@@ -47,12 +53,13 @@ function Community() {
                 <section>
                     <Paper component="form" className={classes.root}>
                         <InputBase
+                            id="searchTerm"
                             className={classes.input}
                             placeholder="Search Fact Checker"
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
                         />
                         <Divider className={classes.divider} orientation="vertical" />
-                        <IconButton type="submit" className={classes.iconButton} aria-label="search">
+                        <IconButton type="submit" className={classes.iconButton} aria-label="search" onClick={onChange}>
                             <SearchIcon style={{ color: pink[500] }}/>
                         </IconButton>
 
@@ -60,9 +67,20 @@ function Community() {
                 </section>
             </div>
 
-            <section className="card">
-                <Card/>
-            </section>
+
+            {data.map((article) => (
+                <section className="card">
+                    <Card
+                        key={article}
+                        claimant={article.claimant || "Martyn"}
+                        text={article.text || "Claim being made"}
+                        textualRating={article.textualRating || 'The real facts'}
+                        url={article.url || "article url"}
+                        title={article.title || "Article title"}
+                    />
+                </section>
+            ))}
+
            
         </div>
     );
