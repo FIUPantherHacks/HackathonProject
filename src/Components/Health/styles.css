@@ -1,3 +1,36 @@
-h1 {
+.health h1 {
     font-weight: 500;
+    display: flex;
+}
+.health ul {
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+.health span {
+    color: green;
+    border-bottom: 3px solid #ff6295;
+}
+.health ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .title h1{
+      text-align: center;
+      justify-content: center;
+      font-weight: 600;
+  }
+  P {
+      font-size: 20px;
+      font-weight: 500 !important;
+  }
+.dont {
+    color:red;
+    font-weight: 800;
+}
+.do {
+    color:green;
+    font-weight: 800;
 }
