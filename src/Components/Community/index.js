@@ -43,7 +43,7 @@ function Community() {
                     <Paper component="form" className={classes.root}>
                         <InputBase
                             className={classes.input}
-                            placeholder="Search Fact Checker"
+                            // placeholder="Search Fact Checker"
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
                         />
                         <Divider className={classes.divider} orientation="vertical" />
