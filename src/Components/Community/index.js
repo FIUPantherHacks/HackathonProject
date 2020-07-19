@@ -11,7 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
 import { pink } from '@material-ui/core/colors';
 import MenuItem from "@material-ui/core/MenuItem";
-
+import FactCheckAPI from "../../Services/FactCheckAPI";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '2px 4px',
@@ -41,8 +41,9 @@ function Community() {
     const [data, setData] = useState([{}]);
 
 
-    function onClick() {
+    async function onClick() {
         console.log(searchTerm);
+        setData(await FactCheckAPI.search(searchTerm));
 
     }
 
