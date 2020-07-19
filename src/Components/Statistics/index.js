@@ -23,7 +23,7 @@ let dataD = [
 const useStyles = makeStyles((theme) => ({
     formControl: {
       margin: theme.spacing(1),
-      minWidth: 120,
+      minWidth: 140,
     },
     selectEmpty: {
       marginTop: theme.spacing(2),
@@ -46,8 +46,7 @@ function  Statistics() {
     const [fCountry, setfCountry] = React.useState('');
     const handleChange = (event,value) => {
         setfCountry(event.target.value);
-        console.log(event.target.value)
-        console.log(value)
+
     };
     const [data, setdata] = useState(dataD);
     const [open, setOpen] = React.useState(false);
@@ -61,27 +60,28 @@ function  Statistics() {
 
     return <>
         <Header/>
-        <FormControl className={classes.formControl}>
-        <InputLabel id="firstCountry">Country</InputLabel>
-        <Select
-          labelId="firstCountry"
-          id="firstCountry"
-          value={fCountry}
-          onChange={handleChange}
-          open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-            {data.map((country) => (
-                <MenuItem value={country.regionName}>{country.regionName}</MenuItem>
-            ))}
-        </Select>
-        <FormHelperText>Choose a Country</FormHelperText>
-      </FormControl>
-
+        <section>
+            <FormControl className={classes.formControl}>
+            <InputLabel id="firstCountry">First Country</InputLabel>
+            <Select
+              labelId="firstCountry"
+              id="firstCountry"
+              value={fCountry}
+              onChange={handleChange}
+              open={open}
+              onClose={handleClose}
+              onOpen={handleOpen}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+                {data.map((country) => (
+                    <MenuItem value={country.regionName}>{country.regionName}</MenuItem>
+                ))}
+            </Select>
+            <FormHelperText>Choose a Country</FormHelperText>
+          </FormControl>
+        </section>
         <Chart country1={1} country2={1} country1Name={`Martyn`} country2Name={`Jessica`} />
     </>;
 }
