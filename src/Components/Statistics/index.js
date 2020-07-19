@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from "../Header/Header";
 import WorldDataAPI from "../../Services/WorldDataAPI"
 
@@ -9,7 +9,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Chart from "./Chart";
-
+import './style.css';
 let dataD = [
     {
         "regionName": "United States",
@@ -22,15 +22,15 @@ let dataD = [
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
-      margin: theme.spacing(1),
-      minWidth: 140,
+        margin: theme.spacing(1),
+        minWidth: 140,
     },
     selectEmpty: {
-      marginTop: theme.spacing(2),
+        marginTop: theme.spacing(2),
     },
-  }));
+}));
 
-function  Statistics() {
+function Statistics() {
     useEffect(() => {
         async function getNewData() {
             let newdata = await WorldDataAPI.globalData();
@@ -49,14 +49,14 @@ function  Statistics() {
 
     const [sCountry, setsCountry] = React.useState('');
     const [sCountryN, setsCountryN] = React.useState(31);
-    const handleChange = (event,value) => {
+    const handleChange = (event, value) => {
         console.log("F", event);
         console.log("F2", value);
         setfCountry(value.props.value);
         setfCountryN(value.props.value.casesCount);
 
     };
-    const handleChange2 = (event,value) => {
+    const handleChange2 = (event, value) => {
         setsCountry(value.props.value);
         setsCountryN(value.props.value.casesCount);
 
@@ -64,54 +64,59 @@ function  Statistics() {
     const [data, setdata] = useState(dataD);
 
 
-    return <>
-        <Header/>
-        <section>
-            <FormControl className={classes.formControl}>
-            <InputLabel id="firstCountry">First Country</InputLabel>
-            <Select
-              labelId="firstCountry"
-              id="firstCountry"
-              value={fCountry}
-              onChange={handleChange}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-                {data.map((country) => (
-                    <MenuItem value={country}>{country.regionName}</MenuItem>
-                ))}
-            </Select>
-            <FormHelperText>Choose a Country</FormHelperText>
-          </FormControl>
-        </section>
-
-
-        <section>
-            <FormControl className={classes.formControl}>
-                <InputLabel id="secondCountry">Second Country</InputLabel>
-                <Select
-                    labelId="secondCountry"
-                    id="secondCountry"
-                    value={sCountry}
-                    onChange={handleChange2}
-                >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
-                    {data.map((country) => (
-                        <MenuItem value={country}>{country.regionName}</MenuItem>
-                    ))}
-                </Select>
-                <FormHelperText>Choose a Country</FormHelperText>
-            </FormControl>
-        </section>
-
-        <div class="chart-container" style={{position: 'relative', height:'40vh', width:'80vw'}}>
-            <Chart id= "chart" country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName || "none"} country2Name={sCountry.regionName || "none"} />
+    return (
+        <div>
+            <Header />
+            <div className="statistics">
+                <section className="title">
+                    <span>Compare Total COVID-19 Cases by Country</span>
+                </section>
+                <div id="main-stats">
+                    <section className="form-stats">
+                        <FormControl className={classes.formControl}>
+                            <InputLabel id="firstCountry">First Country</InputLabel>
+                            <Select
+                                labelId="firstCountry"
+                                id="firstCountry"
+                                value={fCountry}
+                                onChange={handleChange}
+                            >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                {data.map((country) => (
+                                    <MenuItem value={country}>{country.regionName}</MenuItem>
+                                ))}
+                            </Select>
+                            <FormHelperText>Choose a Country</FormHelperText>
+                        </FormControl>
+                    </section>
+                    <section className="form-stats">
+                        <FormControl className={classes.formControl}>
+                            <InputLabel id="secondCountry">Second Country</InputLabel>
+                            <Select
+                                labelId="secondCountry"
+                                id="secondCountry"
+                                value={sCountry}
+                                onChange={handleChange2}
+                            >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                {data.map((country) => (
+                                    <MenuItem value={country}>{country.regionName}</MenuItem>
+                                ))}
+                            </Select>
+                            <FormHelperText>Choose a Country</FormHelperText>
+                        </FormControl>
+                    </section>
+                </div>
+                <div class="chart-container" style={{ position: 'relative', height: '40vh', width: '80vw' }}>
+                    <Chart id="chart" country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName || "none"} country2Name={sCountry.regionName || "none"} />
+                </div>
+            </div>
         </div>
-      
-    </>;
+    );
 }
 
 export default Statistics;

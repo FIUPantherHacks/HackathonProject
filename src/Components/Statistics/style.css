@@ -1,8 +1,28 @@
 .chart-container {
-    background-color: red;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 canvas {
     text-align: center;
     justify-content: center;
     display: flex;
 }
+
+.statistics span {
+    border-bottom: 3px solid #ff6295 ;
+}
+.title{
+    text-align: center;
+    justify-content: center;
+    font-weight: 400; 
+    font-size: 30px;       
+}
+
+#main-stats {
+    margin: 50px 0; 
+    display: grid;
+    grid-template-columns: 50px 90px;
+    justify-content: center;
+    display: flex;
+  }
