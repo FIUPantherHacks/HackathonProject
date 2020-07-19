@@ -7,7 +7,7 @@ const instance = axios.create({
     headers: {'X-Authorization' : key}
 });
 
-const API = {
+const WorldDataAPI = {
     countries: async function (token) {
         let response = await instance.get(`/api/covid/countries`);
         return response.data;
@@ -29,7 +29,7 @@ const API = {
     globalData: async function () {
         try {
             let response = await instance.get(`/api/covid/globalData`);
-            console.log('API SERVICED', response);
+            console.log('WorldDataAPI SERVICED', response);
             return response.data;
         } catch (e) {
             return { message: "There was an Error getting the global Data info" };
@@ -71,4 +71,4 @@ const API = {
 };
 
 
-export default API;
+export default WorldDataAPI;
