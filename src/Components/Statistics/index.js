@@ -31,14 +31,6 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 function  Statistics() {
-    const classes = useStyles();
-    const [age, setAge] = React.useState('');
-  
-    const handleChange = (event) => {
-      setAge(event.target.value);
-    };
-  
-    const [data, setdata] = useState(dataD);
     useEffect(() => {
         async function getNewData() {
             let newdata = await API.globalData();
@@ -48,26 +40,36 @@ function  Statistics() {
 
         getNewData();
     }, []);
+
+
+    const classes = useStyles();
+    const [fCountry, setfCountry] = React.useState('');
+    const handleChange = (event) => {
+        setfCountry(event.target.value);
+    };
+    const [data, setdata] = useState(dataD);
+
     return <>
-    <Header/>
-    <FormControl className={classes.formControl}>
-    <InputLabel id="demo-simple-select-helper-label">Country</InputLabel>
-    <Select
-      labelId="demo-simple-select-helper-label"
-      id="demo-simple-select-helper"
-      value={age}
-      onChange={handleChange}
-    >
-      <MenuItem value="">
-        <em>None</em>
-      </MenuItem>
-        {data.map((country) => (
-            <MenuItem value={`$\{country.regionName}`}>{country.regionName}</MenuItem>
-        ))}
-    </Select>
-    <FormHelperText>Choose a Country</FormHelperText>
-  </FormControl>
-    <Chart country1={1} country2={1} country1Name={`Martyn`} country2Name={`Jessica`} />
+        <Header/>
+        <FormControl className={classes.formControl}>
+        <InputLabel id="firstCountry">Country</InputLabel>
+        <Select
+          labelId="firstCountry"
+          id="firstCountry"
+          value={fCountry}
+          onChange={handleChange}
+        >
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+            {data.map((country) => (
+                <MenuItem value={`$\{country.regionName}`}>{country.regionName}</MenuItem>
+            ))}
+        </Select>
+        <FormHelperText>Choose a Country</FormHelperText>
+      </FormControl>
+
+        <Chart country1={1} country2={1} country1Name={`Martyn`} country2Name={`Jessica`} />
     </>;
 }
 
