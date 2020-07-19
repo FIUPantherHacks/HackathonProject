@@ -28,7 +28,8 @@ const API = {
     },
     globalData: async function () {
         try {
-            let response = await instance.get(`/register`);
+            let response = await instance.get(`/api/covid/globalData`);
+            console.log('Martn', response);
             return response.data;
         } catch (e) {
             return { message: "There was an Error getting the global Data info" };

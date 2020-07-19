@@ -18,9 +18,9 @@ function MainPage() {
 
       <section id="main">
       <div className="main-text">
-        <span>COVID-19</span> <br></br> 
-        some info here <br></br>
-        lorem ipsum indeed <br></br>
+        <span>COVID-19</span> <br/>
+        Information on Covid prevention <br/>
+        As wells as information and statistics<br/>
       </div>
       <Lottie 
 	    options={defaultOptions}
