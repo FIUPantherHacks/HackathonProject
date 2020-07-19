@@ -75,9 +75,9 @@ function  Statistics() {
               value={fCountry}
               onChange={handleChange}
             >
-              <MenuItem value="">
+              {/* <MenuItem value="">
                 <em>None</em>
-              </MenuItem>
+              </MenuItem> */}
                 {data.map((country) => (
                     <MenuItem value={country}>{country.regionName}</MenuItem>
                 ))}
