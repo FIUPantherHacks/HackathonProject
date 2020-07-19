@@ -44,10 +44,20 @@ function  Statistics() {
 
     const classes = useStyles();
     const [fCountry, setfCountry] = React.useState('');
-    const handleChange = (event) => {
+    const handleChange = (event,value) => {
         setfCountry(event.target.value);
+        console.log(event.target.value)
+        console.log(value)
     };
     const [data, setdata] = useState(dataD);
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
 
     return <>
         <Header/>
@@ -58,12 +68,15 @@ function  Statistics() {
           id="firstCountry"
           value={fCountry}
           onChange={handleChange}
+          open={open}
+          onClose={handleClose}
+          onOpen={handleOpen}
         >
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
             {data.map((country) => (
-                <MenuItem value={`$\{country.regionName}`}>{country.regionName}</MenuItem>
+                <MenuItem value={country.regionName}>{country.regionName}</MenuItem>
             ))}
         </Select>
         <FormHelperText>Choose a Country</FormHelperText>
