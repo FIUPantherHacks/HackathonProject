@@ -4,7 +4,7 @@ import {Doughnut} from "react-chartjs-2";
 
 
 
-function Chart() {
+function Chart(props) {
 
     return (
         <>
@@ -12,10 +12,10 @@ function Chart() {
 
 
             <Doughnut width="0.1" height="0.1" data={{
-                labels: ['USA', 'Jessica'],
+                labels: [props.country1Name, props.country2Name],
                 datasets: [{
                     label: '# of Votes',
-                    data: [12, 19],
+                    data: [props.country1, props.country2],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)'

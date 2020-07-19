@@ -67,7 +67,7 @@ function  Statistics() {
     </Select>
     <FormHelperText>Choose a Country</FormHelperText>
   </FormControl>
-    <Chart/>
+    <Chart country1={1} country2={1} country1Name={`Martyn`} country2Name={`Jessica`} />/>
     </>;
 }
 
