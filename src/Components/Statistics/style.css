@@ -1,14 +1,10 @@
-.chart-container {
-    text-align: center;
+.chart-container{
+    /* background-color: red; */
+    margin-left: 4%;
+    margin-right: auto;
     justify-content: center;
     display: flex;
 }
-canvas {
-    text-align: center;
-    justify-content: center;
-    display: flex;
-}
-
 .statistics span {
     border-bottom: 3px solid #ff6295 ;
 }
