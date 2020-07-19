@@ -12,7 +12,7 @@ export default function App() {
             <span>How to Protect Yourself and Others</span>
         </section>
     <section>
-        <h1> <img src="../imgs/washHands.png" width="50" alt="logo" />Wash Your Hands</h1>
+            <h1> <img src="../imgs/washHands.png" width="50" alt="logo" />Wash Your Hands</h1>
         <ul>
             <li> <p className="dont">DON'T</p><img width="390" src="https://media.giphy.com/media/gjUgdsM72ZM1C8KzeT/giphy.gif"/></li>
             <li> <p className="do">DO</p><img src="https://media.giphy.com/media/tkBwALAud5Sfu/giphy.gif"/></li>
