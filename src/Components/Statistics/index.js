@@ -43,14 +43,15 @@ function  Statistics() {
 
 
     const classes = useStyles();
+
     const [fCountry, setfCountry] = React.useState('');
-    const handleChange = (event,value) => {
-        setfCountry(event.target.value);
-        console.log(event.target.value)
-        console.log(value)
-    };
     const [data, setdata] = useState(dataD);
     const [open, setOpen] = React.useState(false);
+
+    const handleChange = (event) => {
+        setfCountry(event.target.value);
+    };
+
     const handleClose = () => {
         setOpen(false);
     };
@@ -82,7 +83,7 @@ function  Statistics() {
         <FormHelperText>Choose a Country</FormHelperText>
       </FormControl>
 
-        <Chart country1={1} country2={1} country1Name={`Martyn`} country2Name={`Jessica`} />
+        <Chart country1={1} country2={1} country1Name={fCountry} country2Name={`Jessica`} />
     </>;
 }
 
