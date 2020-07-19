@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from "../Header/Header";
 import './style.css';
 import Card from '../Card/Card';
@@ -35,6 +35,11 @@ const useStyles = makeStyles((theme) => ({
 
 function Community() {
     const classes = useStyles();
+    const [searchTerm, setsearchTerm] = useState('');
+    const [data, setData] = useState([{}]);
+
+
+
     return (
         <div className="community-main">
             <Header/>
@@ -43,7 +48,7 @@ function Community() {
                     <Paper component="form" className={classes.root}>
                         <InputBase
                             className={classes.input}
-                            // placeholder="Search Fact Checker"
+                            placeholder="Search Fact Checker"
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
                         />
                         <Divider className={classes.divider} orientation="vertical" />
