@@ -45,13 +45,20 @@ function  Statistics() {
     const classes = useStyles();
 
     const [fCountry, setfCountry] = React.useState('');
+    const [fCountryN, setfCountryN] = React.useState(69);
+
     const [sCountry, setsCountry] = React.useState('');
+    const [sCountryN, setsCountryN] = React.useState(31);
     const handleChange = (event,value) => {
-        setfCountry(event.target.value);
+        // console.log("F", event);
+        // console.log("F2", value.props.value);
+        setfCountry(value.props.value.regionName);
+        setfCountryN(value.props.value.casesCount);
 
     };
     const handleChange2 = (event,value) => {
-        setsCountry(event.target.value);
+        setfCountry(value.props.value.regionName);
+        setfCountryN(value.props.value.casesCount);
 
     };
     const [data, setdata] = useState(dataD);
@@ -72,7 +79,7 @@ function  Statistics() {
                 <em>None</em>
               </MenuItem>
                 {data.map((country) => (
-                    <MenuItem value={country.regionName}>{country.regionName}</MenuItem>
+                    <MenuItem value={country}>{country.regionName}</MenuItem>
                 ))}
             </Select>
             <FormHelperText>Choose a Country</FormHelperText>
@@ -93,7 +100,7 @@ function  Statistics() {
                         <em>None</em>
                     </MenuItem>
                     {data.map((country) => (
-                        <MenuItem value={country.regionName}>{country.regionName}</MenuItem>
+                        <MenuItem value={country}>{country.regionName}</MenuItem>
                     ))}
                 </Select>
                 <FormHelperText>Choose a Country</FormHelperText>
@@ -101,7 +108,7 @@ function  Statistics() {
         </section>
 
 
-        <Chart country1={1} country2={1} country1Name={fCountry} country2Name={sCountry} />
+        <Chart country1={fCountryN} country2={sCountryN} country1Name={fCountry} country2Name={sCountry} />
     </>;
 }
 
