@@ -2,6 +2,7 @@
     font-weight: 500;
     display: flex;
 }
+
 .health ul {
     text-decoration: none;
     list-style: none;
@@ -10,7 +11,7 @@
 
 .health span {
     color: green;
-    border-bottom: 3px solid #ff6295;
+    /*border-bottom: 3px solid #ff6295 ;*/
 }
 .health ul {
     display: grid;

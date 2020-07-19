@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../Header/Header";
 import './styles.css';
+import {HeaderU} from "./Styled";
 export default function App() {
   
   return (
@@ -8,7 +9,7 @@ export default function App() {
     <Header/>
     <div className ="health">
         <span className="title">
-            <h1>How to Protect Yourself and Others</h1>
+            <HeaderU>How to Protect Yourself and Others</HeaderU>
         </span>
     <section>
         <h1> <img src="../imgs/washHands.png" width="50" alt="logo" />Wash Your Hands</h1>

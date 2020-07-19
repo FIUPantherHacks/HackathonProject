@@ -2,7 +2,7 @@ const axios = require('axios');
 const key = '8126c90f-d8a6-4c30-b99c-c89b0cd490a7';
 
 const instance = axios.create({
-    baseURL: 'https://cors-anywhere.herokuapp.com/cyberpurge.com',
+    baseURL: 'https://www.cyberpurge.com',
     timeout: 1000,
     headers: {'X-Authorization' : key}
 });
