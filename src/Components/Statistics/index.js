@@ -45,19 +45,17 @@ function  Statistics() {
     const classes = useStyles();
 
     const [fCountry, setfCountry] = React.useState('');
+    const [sCountry, setsCountry] = React.useState('');
     const handleChange = (event,value) => {
         setfCountry(event.target.value);
 
     };
-    const [data, setdata] = useState(dataD);
-    const [open, setOpen] = React.useState(false);
-    const handleClose = () => {
-        setOpen(false);
-    };
+    const handleChange2 = (event,value) => {
+        setsCountry(event.target.value);
 
-    const handleOpen = () => {
-        setOpen(true);
     };
+    const [data, setdata] = useState(dataD);
+
 
     return <>
         <Header/>
@@ -69,9 +67,6 @@ function  Statistics() {
               id="firstCountry"
               value={fCountry}
               onChange={handleChange}
-              open={open}
-              onClose={handleClose}
-              onOpen={handleOpen}
             >
               <MenuItem value="">
                 <em>None</em>
@@ -83,7 +78,30 @@ function  Statistics() {
             <FormHelperText>Choose a Country</FormHelperText>
           </FormControl>
         </section>
-        <Chart country1={1} country2={1} country1Name={fCountry} country2Name={`Jessica`} />
+
+
+        <section>
+            <FormControl className={classes.formControl}>
+                <InputLabel id="secondCountry">Second Country</InputLabel>
+                <Select
+                    labelId="secondCountry"
+                    id="secondCountry"
+                    value={sCountry}
+                    onChange={handleChange2}
+                >
+                    <MenuItem value="">
+                        <em>None</em>
+                    </MenuItem>
+                    {data.map((country) => (
+                        <MenuItem value={country.regionName}>{country.regionName}</MenuItem>
+                    ))}
+                </Select>
+                <FormHelperText>Choose a Country</FormHelperText>
+            </FormControl>
+        </section>
+
+
+        <Chart country1={1} country2={1} country1Name={fCountry} country2Name={sCountry} />
     </>;
 }
 
