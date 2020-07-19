@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../Header/Header";
-import { Doughnut } from 'react-chartjs-2';
 import API from "../../Services/API"
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,6 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Chart from "./Chart";
 
 let dataD = [
     {
@@ -43,49 +43,32 @@ function  Statistics() {
         async function getNewData() {
             let newdata = await API.globalData();
             console.log("NEW DATA", newdata)
-            setdata(newdata);
+            setdata(newdata.data);
         }
 
         getNewData();
     }, []);
-    return (
-        <>
-        <Header/>
-        <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-helper-label">Country</InputLabel>
-        <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={age}
-          onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>Choose a Country</FormHelperText>
-      </FormControl>
-        <Doughnut width="0.1" height="0.1" data={{
-            labels: ['USA', 'Jessica'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                ],
-                borderWidth: 1
-            }]
-        }} />
-        </>
-    );
+    return <>
+    <Header/>
+    <FormControl className={classes.formControl}>
+    <InputLabel id="demo-simple-select-helper-label">Country</InputLabel>
+    <Select
+      labelId="demo-simple-select-helper-label"
+      id="demo-simple-select-helper"
+      value={age}
+      onChange={handleChange}
+    >
+      <MenuItem value="">
+        <em>None</em>
+      </MenuItem>
+        {data.map((country) => (
+            <MenuItem value={`$\{country.regionName}`}>{country.regionName}</MenuItem>
+        ))}
+    </Select>
+    <FormHelperText>Choose a Country</FormHelperText>
+  </FormControl>
+    <Chart country1={1} country2={1} country1Name={`Martyn`} country2Name={`Jessica`} />/>
+    </>;
 }
 
 export default Statistics;
