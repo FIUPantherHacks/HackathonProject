@@ -51,15 +51,16 @@ function Community() {
             <Header/>
             <div className="searchbar">
                 <section>
-                    <Paper component="form" className={classes.root}>
+                    <Paper component="form" className={classes.root} >
                         <InputBase
                             id="searchTerm"
                             className={classes.input}
                             placeholder="Search Fact Checker"
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
+                            onClick={onChange}
                         />
                         <Divider className={classes.divider} orientation="vertical" />
-                        <IconButton className={classes.iconButton} aria-label="search" onClick={onChange}>
+                        <IconButton className={classes.iconButton} aria-label="search">
                             <SearchIcon style={{ color: pink[500] }}/>
                         </IconButton>
 
