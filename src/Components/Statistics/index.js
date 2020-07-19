@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../Header/Header";
-import API from "../../Services/API"
+import WorldDataAPI from "../../Services/WorldDataAPI"
 
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 function  Statistics() {
     useEffect(() => {
         async function getNewData() {
-            let newdata = await API.globalData();
+            let newdata = await WorldDataAPI.globalData();
             console.log("NEW DATA", newdata)
             setdata(newdata.data);
         }
