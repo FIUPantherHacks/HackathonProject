@@ -1,12 +1,9 @@
 .chart-container {
     /* background-color: red; */
-    margin-left: 4%;
+    margin-left: 10%;
     margin-right: auto;
-}
-.chart-container {
-    display:flex;
-    justify-content:center;
-    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 canvas {
     text-align: center;
