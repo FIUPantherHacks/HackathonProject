@@ -108,7 +108,7 @@ function  Statistics() {
         </section>
 
 
-        <Chart country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName} country2Name={sCountry.regionName} />
+        <Chart country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName || "none"} country2Name={sCountry.regionName || "none"} />
     </>;
 }
 
