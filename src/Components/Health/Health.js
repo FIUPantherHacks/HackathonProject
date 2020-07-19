@@ -8,9 +8,9 @@ export default function App() {
     <div>
     <Header/>
     <div className ="health">
-        <span className="title">
-            <HeaderU>How to Protect Yourself and Others</HeaderU>
-        </span>
+        <section className="title">
+            <span>How to Protect Yourself and Others</span>
+        </section>
     <section>
         <h1> <img src="../imgs/washHands.png" width="50" alt="logo" />Wash Your Hands</h1>
         <ul>

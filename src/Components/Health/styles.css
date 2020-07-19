@@ -1,3 +1,7 @@
+span{
+    border-bottom: 3px solid #ff6295;
+}
+
 .health h1 {
     font-weight: 500;
     display: flex;
@@ -18,7 +22,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .title h1{
+  .title span{
       text-align: center;
       justify-content: center;
       font-weight: 600;
