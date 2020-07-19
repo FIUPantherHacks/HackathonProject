@@ -1,0 +1,8 @@
+.chart-container {
+    background-color: red;
+}
+canvas {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}

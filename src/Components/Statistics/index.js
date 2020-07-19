@@ -75,9 +75,9 @@ function  Statistics() {
               value={fCountry}
               onChange={handleChange}
             >
-              {/* <MenuItem value="">
+              <MenuItem value="">
                 <em>None</em>
-              </MenuItem> */}
+              </MenuItem>
                 {data.map((country) => (
                     <MenuItem value={country}>{country.regionName}</MenuItem>
                 ))}
@@ -107,8 +107,10 @@ function  Statistics() {
             </FormControl>
         </section>
 
-
-        <Chart country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName || "none"} country2Name={sCountry.regionName || "none"} />
+        <div class="chart-container" style={{position: 'relative', height:'40vh', width:'80vw'}}>
+            <Chart id= "chart" country1={fCountryN} country2={sCountryN} country1Name={fCountry.regionName || "none"} country2Name={sCountry.regionName || "none"} />
+        </div>
+      
     </>;
 }
 

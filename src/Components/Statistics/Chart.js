@@ -2,16 +2,16 @@ import React from 'react';
 import {Doughnut} from "react-chartjs-2";
 
 
-
+const data = {
+    
+}
 
 function Chart(props) {
 
     return (
         <>
-
-
-
-            <Doughnut width="0.1" height="0.1" data={{
+            <Doughnut 
+              data={{
                 labels: [props.country1Name, props.country2Name],
                 datasets: [{
                     label: '# of Votes',
@@ -24,9 +24,11 @@ function Chart(props) {
                         'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',
                     ],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    hoverBorderWidth: 2,
                 }]
-            }} />
+            }} 
+            options={{maintainAspectRatio: false, responsive: true, maintainAspectRatio: false }}/>
         </>
     );
 }
