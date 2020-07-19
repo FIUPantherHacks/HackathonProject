@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../Header/Header";
+import { Doughnut } from 'react-chartjs-2';
 import API from "../../Services/API"
 let dataD = [
     {
