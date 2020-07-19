@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { pink } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   root: {
@@ -25,7 +26,6 @@ const useStyles = makeStyles({
 
 export default function SimpleCard(props) {
   const classes = useStyles();
-  // const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root}>
@@ -33,21 +33,19 @@ export default function SimpleCard(props) {
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {props.claimant}
         </Typography>
-        <Typography variant="h5" component="h2">
+
+        <Typography lassName={classes.pos} component="h2">
           {props.text}
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          FactCheck : {props.textualRating}
+        <br/>
+        <Typography component="h2">
+          Rating: {props.textualRating}
         </Typography>
         <Typography variant="body2" component="p">
-          Article : <a href={props.url}>{props.title}</a>
+          <a style={{color: '#ff6295'}} href={props.url}>{props.title}</a>
           <br />
-          {'"a benevolent smile"'}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
