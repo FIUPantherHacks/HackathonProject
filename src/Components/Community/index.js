@@ -5,6 +5,7 @@ function Community() {
     return (
         <>
             <Header/>
+            
             <section>
                 <Card/>
             </section>
