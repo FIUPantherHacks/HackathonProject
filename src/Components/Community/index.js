@@ -1,3 +1,4 @@
+
 import React, {useState} from 'react';
 import Header from "../Header/Header";
 import './style.css';
@@ -12,25 +13,25 @@ import { pink } from '@material-ui/core/colors';
 import MenuItem from "@material-ui/core/MenuItem";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: '2px 4px',
-    margin: '5% 0',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 700,
-  },
-  input: {
-    marginLeft: theme.spacing(1),
-    flex: 1,
-  },
-  iconButton: {
-    padding: 10,
-  },
-  divider: {
-    height: 28,
-    margin: 4,
-  },
+    root: {
+        padding: '2px 4px',
+        margin: '5% 0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 700,
+    },
+    input: {
+        marginLeft: theme.spacing(1),
+        flex: 1,
+    },
+    iconButton: {
+        padding: 10,
+    },
+    divider: {
+        height: 28,
+        margin: 4,
+    },
 }));
 
 
@@ -40,10 +41,13 @@ function Community() {
     const [data, setData] = useState([{}]);
 
 
-    function onChange(event, value) {
-        console.log("E", event);
-        console.log("V", value);
+    function onClick() {
+        console.log(searchTerm);
 
+    }
+
+    function onChange(event){
+        setsearchTerm(event.target.value)
     }
 
     return (
@@ -51,16 +55,16 @@ function Community() {
             <Header/>
             <div className="searchbar">
                 <section>
-                    <Paper component="form" className={classes.root} >
+                    <Paper component="form" className={classes.root}>
                         <InputBase
                             id="searchTerm"
                             className={classes.input}
                             placeholder="Search Fact Checker"
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
-                            onClick={onChange}
+                            onChange={ onChange }
                         />
                         <Divider className={classes.divider} orientation="vertical" />
-                        <IconButton className={classes.iconButton} aria-label="search">
+                        <IconButton className={classes.iconButton} aria-label="search" onClick={ onClick }>
                             <SearchIcon style={{ color: pink[500] }}/>
                         </IconButton>
 
@@ -82,7 +86,7 @@ function Community() {
                 </section>
             ))}
 
-           
+
         </div>
     );
 }
