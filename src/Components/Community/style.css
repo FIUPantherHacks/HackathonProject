@@ -1,5 +1,7 @@
-.searchbar paper{
-    justify-content: center;
-    text-align: left;
-    margin: 0 !important;
+.searchbar{
+    /*justify-content: center;*/
+    /*text-align: center;*/
+    /*position: fixed;*/
+    left: 50%;
+    right: 50%;
 }

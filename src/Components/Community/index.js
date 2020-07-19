@@ -38,20 +38,23 @@ function Community() {
     return (
         <div className="community-main">
             <Header/>
-            <section className="searchbar">
-                <Paper component="form" className={classes.root}>
-                    <InputBase
-                        className={classes.input}
-                        placeholder="Search Fact Checker"
-                        inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
-                    />
-                    <Divider className={classes.divider} orientation="vertical" />
-                    <IconButton type="submit" className={classes.iconButton} aria-label="search">
-                        <SearchIcon style={{ color: pink[500] }}/>
-                    </IconButton>
+            <div className="searchbar">
+                <section>
+                    <Paper component="form" className={classes.root}>
+                        <InputBase
+                            className={classes.input}
+                            placeholder="Search Fact Checker"
+                            inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
+                        />
+                        <Divider className={classes.divider} orientation="vertical" />
+                        <IconButton type="submit" className={classes.iconButton} aria-label="search">
+                            <SearchIcon style={{ color: pink[500] }}/>
+                        </IconButton>
 
-                </Paper>               
-            </section>
+                    </Paper>
+                </section>
+            </div>
+
             <section className="card">
                 <Card/>
             </section>
