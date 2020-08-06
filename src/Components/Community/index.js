@@ -74,8 +74,8 @@ function Community() {
             </div>
 
 
-            {data.map((article) => (
-                <section className="card">
+            {data.map((article,index) => (
+                <section className="card" key={index}>
                     <Card
                         key={article}
                         claimant={article.claimant || "Martyn"}
