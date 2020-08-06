@@ -44,7 +44,7 @@ function Community() {
     async function onClick() {
         console.log(searchTerm);
         setData(await FactCheckAPI.search(searchTerm));
-
+        console.log('DATA HERE',data);
     }
 
     function onChange(event){
