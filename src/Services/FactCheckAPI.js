@@ -12,12 +12,13 @@ const FactCheckAPI = {
     
         let data = axios(config)
             .then(function (response) {
-                console.log(JSON.stringify(response.data));
+                console.log(response);
                 return response.data;
             })
             .catch(function (error) {
                 console.log(error);
             });
+        return data;
     }
 };
 
