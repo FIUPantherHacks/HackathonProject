@@ -34,7 +34,7 @@ export default function SimpleCard(props) {
           {props.claimant}
         </Typography>
 
-        <Typography lassName={classes.pos} component="h2">
+        <Typography className={classes.pos} component="h2">
           {props.text}
         </Typography>
         <br/>
