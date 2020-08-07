@@ -1,5 +1,5 @@
 const axios = require('axios');
-const key = process.env.GFactKey;
+const key = process.env.REACT_APP_GFactKey;
 
 
 const FactCheckAPI = {
