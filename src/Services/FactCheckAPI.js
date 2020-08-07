@@ -1,12 +1,12 @@
 const axios = require('axios');
-const key = process.env.GFactKey;
+const key = 'AIzaSyCFvi2-XvixWUrvTCTQ7zYZ8Ww56IEDRP8';
 
 
 const FactCheckAPI = {
     search: async function (searchText) {
         const config = {
             method: 'get',
-            url: `https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${key}&query=${searchText}`,
+            url: `https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${key}&query=${searchText}&languageCode=en-US`,
             headers: {}
         };
     
