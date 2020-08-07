@@ -85,7 +85,8 @@ function Community() {
                         title={article.title || "Article title"}
                     />
                 </section>
-            ))}
+            ))
+            }
 
 
         </div>
