@@ -6,7 +6,7 @@ const FactCheckAPI = {
     search: async function (searchText) {
         const config = {
             method: 'get',
-            url: `https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${key}&query=${searchText}&languageCode=en-US`,
+            url: `https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${key}&query=${searchText}&languageCode=en-US&pageSize=30`,
             headers: {}
         };
     
