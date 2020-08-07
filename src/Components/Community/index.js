@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 function Community() {
     const classes = useStyles();
     const [searchTerm, setsearchTerm] = useState('');
-    const [data, setData] = useState([{}]);
+    const [data, setData] = useState([]);
 
 
     async function onClick() {
@@ -74,15 +74,15 @@ function Community() {
             </div>
 
 
-            {data.map((article,index) => (
+            {data.map((article, index) => (
                 <section className="card" key={index}>
                     <Card
                         key={article}
                         claimant={article.claimant || "Martyn"}
                         text={article.text || "Claim being made"}
-                        textualRating={article.textualRating || 'The real facts'}
+                        textualRating={article.claimReview[0].textualRating}
                         url={article.url || "article url"}
-                        title={article.title || "Article title"}
+                        title={article.claimReview[0].title || "Article title"}
                     />
                 </section>
             ))
