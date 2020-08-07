@@ -92,7 +92,7 @@ function Community() {
                         claimant={article.claimant || "Martyn"}
                         text={article.text || "Claim being made"}
                         textualRating={article.claimReview[0].textualRating}
-                        url={article.url || "article url"}
+                        url={article.claimReview[0].url || "article url"}
                         title={article.claimReview[0].title || "Article title"}
                     />
                 </section>
