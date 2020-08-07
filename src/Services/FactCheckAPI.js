@@ -12,8 +12,8 @@ const FactCheckAPI = {
     
         let data = axios(config)
             .then(function (response) {
-                console.log(response);
-                return response.data;
+                console.log("THIS IS THE DATA", response.data);
+                return response.data.claims;
             })
             .catch(function (error) {
                 console.log(error);
