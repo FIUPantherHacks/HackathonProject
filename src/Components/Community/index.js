@@ -50,19 +50,30 @@ function Community() {
     function onChange(event){
         setsearchTerm(event.target.value)
     }
-
+    
+    
+    async function onSubmit(e) {
+        e.preventDefault();
+        setData(await FactCheckAPI.search(searchTerm));
+    }
+    
     return (
         <div className="community-main">
             <Header/>
             <div className="searchbar">
                 <section>
-                    <Paper component="form" className={classes.root}>
+                    <Paper component="form"
+                           className={classes.root}
+                           onSubmit={onSubmit}
+                    >
                         <InputBase
                             id="searchTerm"
                             className={classes.input}
                             placeholder="Search Fact Checker"
                             inputProps={{ 'aria-label': 'search fact checker', style: { textAlign: 'center', justifyContent: 'center', display: 'flex' }}}
+                            
                             onChange={ onChange }
+                            
                         />
                         <Divider className={classes.divider} orientation="vertical" />
                         <IconButton className={classes.iconButton} aria-label="search" onClick={ onClick }>
