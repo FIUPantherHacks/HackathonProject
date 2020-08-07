@@ -28,7 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "env.bat",
-    "devmac": " ./env.sh"
+    "devmac": "bash ./shell.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
