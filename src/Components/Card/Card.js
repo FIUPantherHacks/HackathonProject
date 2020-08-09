@@ -6,10 +6,12 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { pink } from '@material-ui/core/colors';
-
+import './Card.css';
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
+    marginBottom: 30,
+    borderBottom: "3px solid #ff6295"
   },
   bullet: {
     display: 'inline-block',
@@ -39,10 +41,13 @@ export default function SimpleCard(props) {
         </Typography>
         <br/>
         <Typography component="h2">
-          Rating: {props.textualRating}
+          Publisher: <b>{props.publisher}</b>
+        </Typography>        
+        <Typography component="h2">
+          Rating: <b>{props.textualRating}</b>
         </Typography>
         <Typography variant="body2" component="p">
-          <a style={{color: '#ff6295'}} href={props.url}>{props.title}</a>
+          <a href={props.url}>{props.title}</a>
           <br />
         </Typography>
       </CardContent>
