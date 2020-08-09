@@ -47,9 +47,9 @@ export default function SimpleCard(props) {
         <Typography color="textSecondary" >
           {props.claimDate}
         </Typography>     
-        <Typography color="textSecondary" >
-          {props.reviewDate}
-        </Typography>        
+        {/*<Typography color="textSecondary" >*/}
+        {/*  {props.reviewDate}*/}
+        {/*</Typography>        */}
 
       </CardContent>
     </Card>

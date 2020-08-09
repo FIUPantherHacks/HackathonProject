@@ -95,8 +95,8 @@ function Community() {
                         textualRating={article.claimReview[0].textualRating || "No rating"}
                         url={article.claimReview[0].url || "article url"}
                         title={article.claimReview[0].title || "Article title"}
-                        claimDate={article.claimDate}
-                        reviewDate={article.claimReview[0].reviewDate }
+                        claimDate={article.claimReview[0].reviewDate || article.claimDate }
+                        // reviewDate={article.claimReview[0].reviewDate }
                     />
                 </section>
             ))
