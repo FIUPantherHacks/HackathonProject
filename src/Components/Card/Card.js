@@ -1,11 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { pink } from '@material-ui/core/colors';
 import './Card.css';
 const useStyles = makeStyles({
   root: {
@@ -33,23 +30,27 @@ export default function SimpleCard(props) {
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Claimant : {props.claimant}
+          Claim by {props.claimant}:
         </Typography>
 
         <Typography className={classes.pos} component="h2">
-          Claim : {props.text}
+          {props.text}
         </Typography>
         <br/>
         <Typography component="h2">
-          Publisher: <b>{props.publisher}</b>
+          <b>{props.publisher}</b>  rating: <b>{props.textualRating}</b>
         </Typography>        
-        <Typography component="h2">
-          Rating: <b>{props.textualRating}</b>
-        </Typography>
-        <Typography variant="body2" component="p">
+        <Typography variant="body2" component="p" style={{color: '#ff6295'}}>
           <a href={props.url}>{props.title}</a>
           <br />
         </Typography>
+        <Typography color="textSecondary" >
+          {props.claimDate}
+        </Typography>     
+        <Typography color="textSecondary" >
+          {props.reviewDate}
+        </Typography>        
+
       </CardContent>
     </Card>
   );
