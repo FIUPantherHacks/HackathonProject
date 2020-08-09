@@ -89,11 +89,10 @@ function Community() {
                 <section className="card" key={index}>
                     <Card
                         key={article}
-                        claimant={article.claimant || "Unknown"}
+                        claimant={article.claimReview[0].publisher.site|| "Unknown claimant"}
                         text={article.text || "Claim being made"}
-                        publisher={article.claimReview[0].publisher.name}
-                        textualRating={article.claimReview[0].textualRating}
-                        url={article.url || "article url"}
+                        textualRating={article.claimReview[0].textualRating || "No rating"}
+                        url={article.claimReview[0].url || "article url"}
                         title={article.claimReview[0].title || "Article title"}
                     />
                 </section>

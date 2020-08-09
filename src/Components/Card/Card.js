@@ -33,11 +33,11 @@ export default function SimpleCard(props) {
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          {props.claimant}
+          Claimant : {props.claimant}
         </Typography>
 
         <Typography className={classes.pos} component="h2">
-          {props.text}
+          Claim : {props.text}
         </Typography>
         <br/>
         <Typography component="h2">
